@@ -8,7 +8,9 @@ function search() {
   var q = $('#query').val();
   var request = gapi.client.youtube.search.list({
     q: q,
-    part: 'snippet'
+    part: 'snippet',
+    maxResults: 50 ,
+    order: 'date'
   });
 
   request.execute(function(response) {
