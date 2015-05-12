@@ -1,3 +1,11 @@
+/*
+	  var playElemnent=[];
+	  for(i=0;i<maxSearch;i++){
+		  playElemnent[i]=document.createElement('div');
+		//  playElemnent[i].setAttribute("id","player"+i);
+		  playElemnent[i].id="player"+i;
+	  }
+*/
 // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
 
@@ -7,16 +15,10 @@
 
       // 3. This function creates an <iframe> (and YouTube player)
       //    after the API code downloads.
-	  /*
-	  for(i=0;i<10;i++){
-		  g=document.createElement('div');
-		  g.setAttribute("id","player"+i);
-		  g=document.createElement('div')
-	  }
-	  */
+	  
 	  var player=[];
       function onYouTubeIframeAPIReady() {
-		for(i=0;i<10;i++){ 
+		for(i=0;i<maxSearch;i++){ 
 			player[i] = new YT.Player('player'+i, {
 			height: '195',
 			width: '320',
@@ -49,8 +51,9 @@
         player.stopVideo();
       }
 	  function update(){
-				for(i=0;i<10;i++){
+				for(i=0;i<maxSearch;i++){
 					player[i].loadVideoById(youtubeSearchResult[i]);
+					player[i].cueVideoById(youtubeSearchResult[i]);
 					player[i].stopVideo();
 				}
 	  }
