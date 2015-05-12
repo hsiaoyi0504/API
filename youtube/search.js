@@ -1,4 +1,5 @@
 // After the API loads, call a function to enable the search box.
+var youtubeSearchResult=[];
 function handleAPILoaded() {
   $('#search-button').attr('disabled', false);
 }
@@ -9,13 +10,20 @@ function search() {
   var request = gapi.client.youtube.search.list({
     q: q,
     part: 'snippet',
-    maxResults: 50 ,
-    order: 'date'
+    maxResults: 10 ,
+    order: 'date',
+	type: 'video',
+	publishedAfter: '1970-01-01T00:00:00Z'
   });
 
   request.execute(function(response) {
-    var str = JSON.stringify(response.result);
-    $('#search-container').html('<pre>' + str + '</pre>');
+   // var str = JSON.stringify(response.result);
+	for(i=0;i<10;i++){
+		youtubeSearchResult[i]=response.result.items[i].id.videoId;
+//		$('#search-container').html('<pre>' + response.result.items[i].id.videoId + '</pre>'+'<br>');
+	}
+//	$('#search-container').html('<pre>' + response.result.items[1].id.videoId + '</pre>');
+	update();
   });
 } 
 document.getElementById("search-button").addEventListener("click",search);
