@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Search</title>
+     <style type="text/css">
+	#searchcontrol { display:none; } 
+	#photo1{
+	top: 190%;
+	position: absolute; 
+	left: 5%; 
+	}
+ 	#photo2{
+  	top: 220%;
+  	position: absolute; 
+  	left: 5%; 
+  	}
+  	#photo3{
+  	top: 250%;
+  	position: absolute; 
+  	left: 5%; 
+  	}
+    #photo4{
+    top: 280%;
+    position: absolute; 
+    left: 5%; 
+    }
+	</style>
+	<link rel="stylesheet" href="style.css">
+	<script src="db.js"></script>
+    <script src="app.js"></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+
+  </head>
+  <body>
+
+	<div id="keyword-wrapper">
+		<form id="new-kw-form" method="POST" action="#">
+		<input type="text" name="new-kw" id="new-kw" placeholder="Enter a keyword:" required>
+		</form>
+		<ul id="keywordList"></ul>
+	</div>
+  
+	<div id="news-wrapper">
+		<ul id="newsList"></ul>
+	</div>
+<!--
+    <div id="buttons">
+      <label> <input id="query" value='type to search' type="text"/><button id="search-button">Search</button></label>
+    </div>
+-->
+	<div id="youtube-wrapper">
+	<div id="player0"></div>
+	<div id="player1"></div>
+	<div id="player2"></div>
+	<div id="player3"></div>
+	<div id="player4"></div>
+	<div id="player5"></div>
+	<div id="player6"></div>
+	<div id="player7"></div>
+	<div id="player8"></div>
+	<div id="player9"></div>
+	<div id="player10"></div>
+	<div id="player11"></div>
+	<div id="player12"></div>
+	<div id="player13"></div>
+	<div id="player14"></div>
+	<div id="player15"></div>
+	<div id="player16"></div>
+	<div id="player17"></div>
+	<div id="player18"></div>
+	<div id="player19"></div>
+	<div id="player20"></div>
+    <div id="search-container"></div>
+	</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="auth.js"></script>
+    
+    <script type="text/javascript" src="search.js"></script>
+	<script src="player.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+
+
+    <div id="photo1" > 
+    <p id="demo1">A Paragraph </p>
+    <img id='pic1' src='' width=300px height=200px> 
+    <a href="www.toBeChanged.com" id="result1" download>Download</a>
+	<img id='pic2' src='' width=300px height=200px> 
+    <a href="www.toBeChanged.com" id="result2" download>Download</a>
+	<img id='pic3' src='' width=300px height=200px> 
+    <a href="www.toBeChanged.com" id="result3" download>Download</a>
+	<img id='pic4' src='' width=300px height=200px>  
+    <a href="www.toBeChanged.com" id="result4" download>Download</a>
+    </div>
+
+    <div id="photo2" > 
+    <p id="demo2">A Paragraph </p>
+    <img id='pic5' src='' width=300px height=200px> 
+    <a href="www.toBeChanged.com" id="result5" download>Download</a>
+    <img id='pic6' src='' width=300px height=200px> 
+    <a href="www.toBeChanged.com" id="result6" download>Download</a>
+    <img id='pic7' src='' width=300px height=200px> 
+    <a href="www.toBeChanged.com" id="result7" download>Download</a>
+    <img id='pic8' src='' width=300px height=200px>  
+    <a href="www.toBeChanged.com" id="result8" download>Download</a>
+    </div>
+
+    <div id="photo3" > 
+    <p id="demo3">A Paragraph </p>
+    <img id='pic9' src='' width=300px height=200px> 
+    <a href="www.toBeChanged.com" id="result9" download>Download</a>
+    <img id='pic10' src='' width=300px height=200px> 
+    <a href="www.toBeChanged.com" id="result10" download>Download</a>
+    <img id='pic11' src='' width=300px height=200px> 
+    <a href="www.toBeChanged.com" id="result11" download>Download</a>
+    <img id='pic12' src='' width=300px height=200px>  
+    <a href="www.toBeChanged.com" id="result12" download>Download</a>
+    </div>
+
+    <div id="photo4" > 
+    <p id="demo4">A Paragraph </p>
+    <img id='pic13' src='' width=300px height=200px> 
+    <a href="www.toBeChanged.com" id="result13" download>Download</a>
+    <img id='pic14' src='' width=300px height=200px> 
+    <a href="www.toBeChanged.com" id="result14" download>Download</a>
+    <img id='pic15' src='' width=300px height=200px> 
+    <a href="www.toBeChanged.com" id="result15" download>Download</a>
+    <img id='pic16' src='' width=300px height=200px>  
+    <a href="www.toBeChanged.com" id="result16" download>Download</a>
+    </div>
+
+    <div id="searchcontrol">Loading...</div>
+    <script src="search again.js"></script>
+
+    <br/>
+    <div id="root" style="width:500px"></div>
+
+  </body>
+</html>
